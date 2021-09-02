@@ -2,6 +2,7 @@ import Globals from "./abstracts/Globals";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
+import Downloads from "./components/Downloads";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <main>
         <Features />
+        <Downloads />
       </main>
     </>
   );

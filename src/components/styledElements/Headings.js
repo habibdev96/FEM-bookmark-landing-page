@@ -19,3 +19,9 @@ export const FeatureHeading = styled.h3`
   font-size: 3.2rem;
   color: var(--darkBlue);
 `;
+
+export const CardHeading = styled.h4`
+  ${headingStyles}
+  font-size: 2rem;
+  color: var(--darkBlue);
+`;

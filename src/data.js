@@ -2,6 +2,10 @@ import featureImgOne from "./assets/illustration-features-tab-1.svg";
 import featureImgTwo from "./assets/illustration-features-tab-2.svg";
 import featureImgThree from "./assets/illustration-features-tab-3.svg";
 
+import downloadImgOne from "./assets/logo-chrome.svg";
+import downloadImgTwo from "./assets/logo-firefox.svg";
+import downloadImgThree from "./assets/logo-opera.svg";
+
 export const featuresData = [
   {
     id: 1,
@@ -26,5 +30,26 @@ export const featuresData = [
     heading: "Share your bookmarks",
     description:
       "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+  },
+];
+
+export const downloadsData = [
+  {
+    id: 1,
+    image: downloadImgOne,
+    heading: "Add to Chrome",
+    specs: "Minimum version 62",
+  },
+  {
+    id: 2,
+    image: downloadImgTwo,
+    heading: "Add to Firefox",
+    specs: "Minimum version 55",
+  },
+  {
+    id: 3,
+    image: downloadImgThree,
+    heading: "Add to Opera",
+    specs: "Minimum version 46",
   },
 ];

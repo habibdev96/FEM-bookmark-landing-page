@@ -26,6 +26,12 @@ const Paragraph = styled.p`
     css`
       font-size: 1.8rem;
     `}
+
+  ${({ card }) =>
+    card &&
+    css`
+      font-size: 1.5rem;
+    `}
 `;
 
 export default Paragraph;
