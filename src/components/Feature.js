@@ -18,7 +18,7 @@ const Feature = ({ image, heading, description }) => {
       <img src={image} alt={heading} className="feature-img" />
       <div className="feature-info">
         <FeatureHeading>{heading}</FeatureHeading>
-        <Paragraph feature>{description}</Paragraph>
+        <Paragraph>{description}</Paragraph>
         <Button primary href="#!">
           More Info
         </Button>

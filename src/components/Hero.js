@@ -33,7 +33,7 @@ const Hero = () => {
       <Container>
         <div className="hero-info">
           <HeroHeading>A Simple Bookmark Manager</HeroHeading>
-          <Paragraph hero>
+          <Paragraph>
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.

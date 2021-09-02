@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { headingStyles } from "../../abstracts/Mixins";
+import { headingStyles, textStyles } from "../../abstracts/Mixins";
 
 export const HeroHeading = styled.h1`
   ${headingStyles}
@@ -24,4 +24,9 @@ export const CardHeading = styled.h4`
   ${headingStyles}
   font-size: 2rem;
   color: var(--darkBlue);
+`;
+
+export const FaqHeading = styled(CardHeading)`
+  ${textStyles}
+  font-size: 1.8rem;
 `;

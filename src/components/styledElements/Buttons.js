@@ -6,6 +6,7 @@ const Button = styled.a`
   font-size: 1.5rem;
   display: inline-block;
   padding: 1.5rem 2rem;
+  cursor: pointer;
   box-shadow: var(--mainShadow);
   border-radius: var(--mainRadius);
   transition: var(--mainTransition);

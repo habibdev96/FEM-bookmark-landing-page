@@ -19,14 +19,10 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10rem;
-
-    &:nth-child(1) {
-      transform: translateY(-5rem);
-    }
   }
 `;
 
-const Download = () => {
+const Downloads = () => {
   const [downloadsCards, setDownloadsCards] = useState(downloadsData);
 
   return (
@@ -47,4 +43,4 @@ const Download = () => {
   );
 };
 
-export default Download;
+export default Downloads;

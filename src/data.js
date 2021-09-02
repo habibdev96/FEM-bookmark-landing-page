@@ -53,3 +53,30 @@ export const downloadsData = [
     specs: "Minimum version 46",
   },
 ];
+
+export const faqData = [
+  {
+    id: 1,
+    question: "What is Bookmark?",
+    answer:
+      "Unicorn vinyl poutine brooklyn, next level direct trade iceland. Shaman copper mug church-key coloring book, whatever poutine normcore fixie cred kickstarter post-ironic street art.",
+  },
+  {
+    id: 2,
+    question: "How can I request a new browser?",
+    answer:
+      "Coloring book forage photo booth gentrify lumbersexual. Migas chillwave poutine synth shoreditch, enamel pin thundercats fashion axe roof party polaroid.",
+  },
+  {
+    id: 3,
+    question: "Is there a mobile app?",
+    answer:
+      "Enamel pin fam sustainable woke whatever venmo. Authentic asymmetrical put a bird on it, lumbersexual activated charcoal kinfolk banjo cred pickled sartorial.",
+  },
+  {
+    id: 4,
+    question: "What about other Chromium browsers?",
+    answer:
+      "Edison bulb direct trade gentrify beard lo-fi seitan sustainable roof party franzen occupy squid. Knausgaard cronut succulents, scenester readymade shabby chic lyft. Copper mug meh vegan gentrify.",
+  },
+];

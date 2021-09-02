@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Downloads from "./components/Downloads";
+import Faqs from "./components/Faqs";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <main>
         <Features />
         <Downloads />
+        <Faqs />
       </main>
     </>
   );
