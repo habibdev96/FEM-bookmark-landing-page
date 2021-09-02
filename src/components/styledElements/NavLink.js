@@ -5,7 +5,7 @@ const NavLink = styled.a`
   ${textStyles}
   text-transform: uppercase;
   font-size: 1.5rem;
-  color: var(--black);
+  color: var(--darkBlue);
   transition: var(--mainTransition);
 
   &:hover,
