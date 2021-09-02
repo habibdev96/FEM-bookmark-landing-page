@@ -6,6 +6,10 @@ import Button from "./styledElements/Buttons";
 import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
 import BgPattern from "./styledElements/BgPattern";
 
+const Header = styled.header`
+  position: relative;
+`;
+
 const Container = styled.div`
   ${maxWidthLg}
   ${sectionSpacingMd}
@@ -25,11 +29,11 @@ const Container = styled.div`
 
 const Hero = () => {
   return (
-    <header style={{ position: "relative" }}>
+    <Header>
       <Container>
         <div className="hero-info">
           <HeroHeading>A Simple Bookmark Manager</HeroHeading>
-          <Paragraph>
+          <Paragraph hero>
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
@@ -50,7 +54,7 @@ const Hero = () => {
         />
       </Container>
       <BgPattern hero />
-    </header>
+    </Header>
   );
 };
 
