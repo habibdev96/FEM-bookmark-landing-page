@@ -5,9 +5,11 @@ import Paragraph from "./styledElements/Paragraphs";
 import Button from "./styledElements/Buttons";
 import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
 import BgPattern from "./styledElements/BgPattern";
+import Responsive from "../abstracts/Responsive";
 
 const Header = styled.header`
   position: relative;
+  overflow: hidden;
 `;
 
 const Container = styled.div`
@@ -20,10 +22,29 @@ const Container = styled.div`
   align-items: center;
   gap: var(--gap);
 
+  ${Responsive.md`
+    grid-template-columns: 1fr;
+    text-align: center;
+  `}
+
   .hero-btn-container {
     display: flex;
     align-items: center;
     gap: var(--gap);
+
+    ${Responsive.lg`
+      gap: 2rem;
+    `}
+
+    ${Responsive.md`
+      justify-content: center;
+    `}
+  }
+
+  .hero-img {
+    ${Responsive.md`
+      order: -1;
+    `}
   }
 `;
 

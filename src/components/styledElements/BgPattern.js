@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import Responsive from "../../abstracts/Responsive";
 
 const BgPattern = styled.div`
   background-color: var(--softBlue);
@@ -13,6 +14,20 @@ const BgPattern = styled.div`
       border-bottom-left-radius: 30%;
       top: 30%;
       right: -10%;
+
+      ${Responsive.lg`
+        top: 35%;
+      `}
+
+      ${Responsive.md`
+        top: 25%;
+        height: 30%;
+      `}
+
+      ${Responsive.sm`
+        top: 20%;
+        height: 20%;
+      `}
     `}
 
   ${({ feature }) =>
@@ -22,6 +37,16 @@ const BgPattern = styled.div`
       top: 60%;
       left: -15%;
       height: 30%;
+
+      ${Responsive.md`
+        height: 20%;
+        top: 75%;
+      `}
+
+      ${Responsive.xs`
+        top: 80%;
+        height: 13%;
+      `}
     `}
 `;
 

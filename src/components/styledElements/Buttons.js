@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { headingStyles } from "../../abstracts/Mixins";
+import Responsive from "../../abstracts/Responsive";
 
 const Button = styled.a`
   ${headingStyles}
@@ -7,9 +8,14 @@ const Button = styled.a`
   display: inline-block;
   padding: 1.5rem 2rem;
   cursor: pointer;
+  text-align: center;
   box-shadow: var(--mainShadow);
   border-radius: var(--mainRadius);
   transition: var(--mainTransition);
+
+  ${Responsive.sm`
+    font-size: 1.4rem;
+  `}
 
   &:hover,
   &:focus {

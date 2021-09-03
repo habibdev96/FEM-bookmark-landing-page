@@ -3,6 +3,7 @@ import { CardHeading } from "./styledElements/Headings";
 import Paragraph from "./styledElements/Paragraphs";
 import cardBgPattern from "../assets/bg-dots.svg";
 import Button from "./styledElements/Buttons";
+import Responsive from "../abstracts/Responsive";
 
 const Card = styled.article`
   text-align: center;
@@ -13,10 +14,18 @@ const Card = styled.article`
 
   &:nth-child(2) {
     transform: translateY(4rem);
+
+    ${Responsive.md`
+      transform: translateY(0);
+    `}
   }
 
   &:nth-child(3) {
     transform: translateY(8rem);
+
+    ${Responsive.md`
+      transform: translateY(0);
+    `}
   }
 
   .card-img {

@@ -8,7 +8,7 @@ import {
 import { CtaHeading } from "./styledElements/Headings";
 import Paragraph from "./styledElements/Paragraphs";
 import { useForm } from "react-hook-form";
-import errorIcon from "../assets/icon-error.svg";
+import Responsive from "../abstracts/Responsive";
 
 const Section = styled.section`
   background-color: var(--softBlue);
@@ -25,11 +25,19 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+
+    ${Responsive.sm`
+      flex-direction: column;
+    `}
   }
 
   .cta-input-container {
     width: 45%;
     position: relative;
+
+    ${Responsive.md`
+      width: 100%;
+    `}
   }
 
   .cta-input {
@@ -62,6 +70,10 @@ const Container = styled.div`
     background-color: var(--softRed);
     border: 0.2rem solid var(--softRed);
     color: var(--white);
+
+    ${Responsive.sm`
+      width: 100%;
+    `}
 
     &:hover,
     &:focus {
@@ -118,7 +130,7 @@ const Cta = () => {
                 required: true,
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: "Whoops, make sure it's an email",
+                  message: "invalid email",
                 },
               })}
             />

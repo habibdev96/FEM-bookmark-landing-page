@@ -1,12 +1,17 @@
 import styled from "styled-components";
 import { flexCenter, textStyles, headingStyles } from "../abstracts/Mixins";
 import logo from "../assets/logo/habibdevgif.gif";
+import Responsive from "../abstracts/Responsive";
 
 const Footer = styled.footer`
   ${flexCenter};
   flex-wrap: wrap;
   padding: 5rem 2rem 1rem 2rem;
   background-color: var(--darkBlue);
+
+  ${Responsive.md`
+    padding: 1rem 2rem;
+  `}
 
   .tag-heading {
     ${textStyles};

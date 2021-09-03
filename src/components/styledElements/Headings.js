@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import { headingStyles, textStyles } from "../../abstracts/Mixins";
+import Responsive from "../../abstracts/Responsive";
 
 export const HeroHeading = styled.h1`
   ${headingStyles}
   font-size: 4.8rem;
   color: var(--darkBlue);
+
+  ${Responsive.sm`
+    font-size: 3rem;
+  `}
 `;
 
 export const SectionHeading = styled.h2`
@@ -23,6 +28,10 @@ export const FeatureHeading = styled.h3`
   ${headingStyles}
   font-size: 3.2rem;
   color: var(--darkBlue);
+
+  ${Responsive.sm`
+    font-size: 2.4rem;
+  `}
 `;
 
 export const CardHeading = styled.h4`

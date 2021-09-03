@@ -3,6 +3,7 @@ import { sectionSpacingSm, maxWidthLg } from "../abstracts/Mixins";
 import logoLight from "../assets/logo-light-bookmark.svg";
 import NavLink from "./styledElements/NavLink";
 import { FaFacebookSquare, FaTwitter } from "react-icons/fa";
+import Responsive from "../abstracts/Responsive";
 
 const FooterContainer = styled.footer`
   background-color: var(--darkBlue);
@@ -14,6 +15,27 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--gap);
+  flex-wrap: wrap;
+
+  ${Responsive.md`
+    flex-direction: column;
+    text-align: center;
+  `}
+
+  .footer-logo {
+    ${Responsive.md`
+      width: 25rem;
+    `}
+  }
+
+  .footer-links,
+  .footer-list {
+    ${Responsive.md`
+      flex-direction: column;
+      text-align: center;
+    `}
+  }
 
   .footer-links,
   .footer-list,

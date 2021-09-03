@@ -11,6 +11,7 @@ import Button from "./styledElements/Buttons";
 import Paragraph from "./styledElements/Paragraphs";
 import Faq from "./Faq";
 import { faqData } from "../data";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}

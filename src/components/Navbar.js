@@ -3,6 +3,7 @@ import logo from "../assets/logo-bookmark.svg";
 import NavLink from "./styledElements/NavLink";
 import Button from "./styledElements/Buttons";
 import { maxWidthLg, sectionSpacingSm } from "../abstracts/Mixins";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -19,6 +20,10 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     gap: var(--gap);
+
+    ${Responsive.md`
+      display: none;
+    `}
   }
 `;
 

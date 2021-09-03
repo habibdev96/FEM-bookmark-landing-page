@@ -10,6 +10,7 @@ import Paragraph from "./styledElements/Paragraphs";
 import BgPattern from "./styledElements/BgPattern";
 import Feature from "./Feature";
 import { featuresData } from "../data";
+import Responsive from "../abstracts/Responsive";
 
 const Section = styled.section`
   position: relative;
@@ -29,6 +30,15 @@ const Container = styled.div`
     text-align: center;
     width: 50%;
     margin: 0 auto;
+
+    ${Responsive.md`
+      width: 100%;
+    `}
+
+    ${Responsive.sm`
+      flex-direction: column;
+      gap: 2rem;
+    `}
   }
 
   .feature-tab {

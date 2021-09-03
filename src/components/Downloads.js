@@ -9,6 +9,7 @@ import { SectionHeading } from "./styledElements/Headings";
 import Paragraph from "./styledElements/Paragraphs";
 import { downloadsData } from "../data";
 import DownloadCard from "./DownloadCard";
+import Responsive from "../abstracts/Responsive";
 
 const Container = styled.div`
   ${maxWidthLg}
@@ -19,6 +20,14 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10rem;
+
+    ${Responsive.lg`
+      gap: var(--gap);
+    `}
+
+    ${Responsive.md`
+      grid-template-columns: 1fr;
+    `}
   }
 `;
 
