@@ -27,6 +27,16 @@ const Paragraph = styled.p`
     css`
       font-size: 1.6rem;
     `}
+
+  ${({ cta }) =>
+    cta &&
+    css`
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.8rem;
+      color: var(--white);
+    `}
 `;
 
 export default Paragraph;

@@ -14,6 +14,11 @@ export const SectionHeading = styled.h2`
   color: var(--darkBlue);
 `;
 
+export const CtaHeading = styled(SectionHeading)`
+  color: var(--white);
+  font-size: 4rem;
+`;
+
 export const FeatureHeading = styled.h3`
   ${headingStyles}
   font-size: 3.2rem;

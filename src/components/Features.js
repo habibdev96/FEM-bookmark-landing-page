@@ -86,5 +86,4 @@ const Features = () => {
     </Section>
   );
 };
-
 export default Features;

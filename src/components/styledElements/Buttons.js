@@ -46,6 +46,22 @@ const Button = styled.a`
       }
     `}
 
+  ${({ secondaryCta }) =>
+    secondaryCta &&
+    css`
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      background-color: var(--softRed);
+      border: 0.2rem solid var(--softRed);
+      color: var(--white);
+
+      &:hover,
+      &:focus {
+        background-color: var(--white);
+        color: var(--softRed);
+      }
+    `}
+
   ${({ tertiary }) =>
     tertiary &&
     css`

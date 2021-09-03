@@ -43,7 +43,9 @@ const Faqs = () => {
           ))}
         </div>
         <div className="faqs-btn-container">
-          <Button primary>More Info</Button>
+          <Button primary href="#!">
+            More Info
+          </Button>
         </div>
       </Container>
     </section>
