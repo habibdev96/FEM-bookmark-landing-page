@@ -36,9 +36,7 @@ const Container = styled.div`
   }
 `;
 
-const Navbar = () => {
-  const [isActive, setIsActive] = useState(false);
-
+const Navbar = ({ isActive, setIsActive }) => {
   return (
     <Nav>
       <Container>

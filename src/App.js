@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Globals from "./abstracts/Globals";
 import AOS from "aos";
 import "../node_modules/aos/dist/aos.css";
@@ -9,14 +10,18 @@ import Faqs from "./components/Faqs";
 import Cta from "./components/Cta";
 import Footer from "./components/Footer";
 import Tag from "./components/Tag";
+import MobileMenu from "./components/MobileMenu";
 
 const App = () => {
   AOS.init({ offset: 10, duration: 1000, once: true });
 
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <Globals />
-      <Navbar />
+      <Navbar isActive={isActive} setIsActive={setIsActive} />
+      <MobileMenu isActive={isActive} />
       <Hero />
       <main>
         <Features />

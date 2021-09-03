@@ -14,6 +14,19 @@ const NavLink = styled.a`
     color: var(--softRed);
   }
 
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      color: var(--white);
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+
+      &:hover,
+      &:focus {
+        color: var(--softRed);
+      }
+    `}
+
   ${({ footer }) =>
     footer &&
     css`

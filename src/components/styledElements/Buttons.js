@@ -22,6 +22,28 @@ const Button = styled.a`
     box-shadow: var(--activeShadow);
   }
 
+  ${({ mobile }) =>
+    mobile &&
+    css`
+      background-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      border: 0.2rem solid var(--white);
+      color: var(--white);
+      width: 50%;
+      margin: 0 auto;
+
+      ${Responsive.sm`
+        width: 100%;
+      `}
+
+      &:hover,
+      &:focus {
+        border: 0.2rem solid var(--softRed);
+        color: var(--softRed);
+      }
+    `}
+
   ${({ primary }) =>
     primary &&
     css`
@@ -36,6 +58,8 @@ const Button = styled.a`
       }
     `}
 
+
+
   ${({ secondary }) =>
     secondary &&
     css`
@@ -48,21 +72,6 @@ const Button = styled.a`
       &:hover,
       &:focus {
         background-color: transparent;
-        color: var(--softRed);
-      }
-    `}
-
-  ${({ secondaryCta }) =>
-    secondaryCta &&
-    css`
-      text-transform: uppercase;
-      background-color: var(--softRed);
-      border: 0.2rem solid var(--softRed);
-      color: var(--white);
-
-      &:hover,
-      &:focus {
-        background-color: var(--white);
         color: var(--softRed);
       }
     `}
