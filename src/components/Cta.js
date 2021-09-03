@@ -1,8 +1,14 @@
 import styled from "styled-components";
-import { maxWidthLg, sectionSpacingMd, textStyles } from "../abstracts/Mixins";
+import {
+  maxWidthLg,
+  sectionSpacingMd,
+  textStyles,
+  headingStyles,
+} from "../abstracts/Mixins";
 import { CtaHeading } from "./styledElements/Headings";
 import Paragraph from "./styledElements/Paragraphs";
-import Button from "./styledElements/Buttons";
+import { useForm } from "react-hook-form";
+import errorIcon from "../assets/icon-error.svg";
 
 const Section = styled.section`
   background-color: var(--softBlue);
@@ -21,13 +27,18 @@ const Container = styled.div`
     gap: 2rem;
   }
 
+  .cta-input-container {
+    width: 45%;
+    position: relative;
+  }
+
   .cta-input {
     ${textStyles}
     outline: 0;
     border: 0;
     font-size: 1.4rem;
     padding: 1.5rem 2rem;
-    width: 35%;
+    width: 100%;
     border-radius: var(--mainRadius);
     box-shadow: var(--mainShadow);
 
@@ -37,9 +48,51 @@ const Container = styled.div`
       box-shadow: var(--activeShadow);
     }
   }
+
+  .cta-submit {
+    ${headingStyles}
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: var(--mainShadow);
+    border-radius: var(--mainRadius);
+    transition: var(--mainTransition);
+    background-color: var(--softRed);
+    border: 0.2rem solid var(--softRed);
+    color: var(--white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--white);
+      color: var(--softRed);
+      box-shadow: var(--activeShadow);
+    }
+  }
+
+  .cta-message {
+    ${textStyles}
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 1.7rem;
+    right: 2rem;
+    color: var(--softRed);
+    border-radius: var(--mainRadius);
+  }
 `;
 
 const Cta = () => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (values) => console.log(values);
+
   return (
     <Section>
       <Container>
@@ -49,13 +102,31 @@ const Cta = () => {
         <CtaHeading data-aos="fade-up" data-aos-delay="100">
           Stay up-to-date with what we’re doing
         </CtaHeading>
-        <form className="cta-form" data-aos="fade-in" data-aos-delay="400">
-          <input
-            type="text"
-            className="cta-input"
-            placeholder="Enter your email address"
-          />
-          <Button secondaryCta>Contact Us</Button>
+        <form
+          className="cta-form"
+          data-aos="fade-in"
+          data-aos-delay="400"
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <div className="cta-input-container">
+            <input
+              type="text"
+              className="cta-input"
+              autoComplete="off"
+              placeholder="Enter your email address"
+              {...register("email", {
+                required: true,
+                pattern: {
+                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                  message: "Whoops, make sure it's an email",
+                },
+              })}
+            />
+            {errors.email && (
+              <small className="cta-message">{errors.email.message}</small>
+            )}
+          </div>
+          <input type="submit" value="Contact Us" className="cta-submit" />
         </form>
       </Container>
     </Section>
