@@ -15,8 +15,13 @@ const BgPattern = styled.div`
       top: 30%;
       right: -10%;
 
+      ${Responsive.xl`
+        top: 40%;
+      `}
+
       ${Responsive.lg`
-        top: 35%;
+        top: 50%;
+        height: 25%;
       `}
 
       ${Responsive.md`
@@ -25,7 +30,7 @@ const BgPattern = styled.div`
       `}
 
       ${Responsive.sm`
-        top: 20%;
+        top: 30%;
         height: 20%;
       `}
     `}

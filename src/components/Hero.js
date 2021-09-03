@@ -3,7 +3,7 @@ import heroImg from "../assets/illustration-hero.svg";
 import { HeroHeading } from "./styledElements/Headings";
 import Paragraph from "./styledElements/Paragraphs";
 import Button from "./styledElements/Buttons";
-import { maxWidthLg, sectionSpacingMd } from "../abstracts/Mixins";
+import { maxWidthLg } from "../abstracts/Mixins";
 import BgPattern from "./styledElements/BgPattern";
 import Responsive from "../abstracts/Responsive";
 
@@ -14,7 +14,7 @@ const Header = styled.header`
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingMd}
+  padding: 20rem 2rem 10rem 2rem;
   position: relative;
   z-index: 5;
   display: grid;

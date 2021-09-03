@@ -1,13 +1,22 @@
+import { useState } from "react";
 import styled from "styled-components";
 import logo from "../assets/logo-bookmark.svg";
 import NavLink from "./styledElements/NavLink";
 import Button from "./styledElements/Buttons";
 import { maxWidthLg, sectionSpacingSm } from "../abstracts/Mixins";
 import Responsive from "../abstracts/Responsive";
+import MobileMenuToggle from "./MobileMenuToggle";
+
+const Nav = styled.nav`
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  background-color: var(--white);
+`;
 
 const Container = styled.div`
   ${maxWidthLg}
-  ${sectionSpacingSm}
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,8 +37,10 @@ const Container = styled.div`
 `;
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <nav>
+    <Nav>
       <Container>
         <img src={logo} alt="bookmark logo" className="nav-logo" />
         <ul className="nav-list">
@@ -46,8 +57,9 @@ const Navbar = () => {
             Login
           </Button>
         </ul>
+        <MobileMenuToggle isActive={isActive} setIsActive={setIsActive} />
       </Container>
-    </nav>
+    </Nav>
   );
 };
 

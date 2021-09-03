@@ -5,6 +5,7 @@ const breakpoints = {
   sm: "500px",
   md: "768px",
   lg: "910px",
+  xl: "1150px",
 };
 
 const Responsive = Object.keys(breakpoints).reduce((accumulator, label) => {
