@@ -28,12 +28,14 @@ const Downloads = () => {
   return (
     <section>
       <Container>
-        <SectionHeading>Download the extension</SectionHeading>
-        <Paragraph section>
+        <SectionHeading data-aos="fade-up">
+          Download the extension
+        </SectionHeading>
+        <Paragraph section data-aos="fade-up" data-aos-delay="100">
           We’ve got more browsers in the pipeline. Please do let us know if
           you’ve got a favourite you’d like us to prioritize.
         </Paragraph>
-        <div className="downloads">
+        <div className="downloads" data-aos="fade-in" data-aos-delay="300">
           {downloadsCards.map((card) => (
             <DownloadCard key={card.id} {...card} />
           ))}

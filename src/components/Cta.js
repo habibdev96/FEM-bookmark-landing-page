@@ -26,7 +26,7 @@ const Container = styled.div`
     outline: 0;
     border: 0;
     font-size: 1.4rem;
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     width: 35%;
     border-radius: var(--mainRadius);
     box-shadow: var(--mainShadow);
@@ -43,9 +43,13 @@ const Cta = () => {
   return (
     <Section>
       <Container>
-        <Paragraph cta>35,000+ already joined</Paragraph>
-        <CtaHeading>Stay up-to-date with what we’re doing</CtaHeading>
-        <form className="cta-form">
+        <Paragraph cta data-aos="fade-up">
+          35,000+ already joined
+        </Paragraph>
+        <CtaHeading data-aos="fade-up" data-aos-delay="100">
+          Stay up-to-date with what we’re doing
+        </CtaHeading>
+        <form className="cta-form" data-aos="fade-in" data-aos-delay="400">
           <input
             type="text"
             className="cta-input"

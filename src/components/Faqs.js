@@ -32,17 +32,23 @@ const Faqs = () => {
   return (
     <section>
       <Container>
-        <SectionHeading>Frequently Asked Questions</SectionHeading>
-        <Paragraph section>
+        <SectionHeading data-aos="fade-up">
+          Frequently Asked Questions
+        </SectionHeading>
+        <Paragraph section data-aos="fade-up" data-aos-delay="100">
           Here are some of our FAQs. If you have any other questions you’d like
           answered please feel free to email us.
         </Paragraph>
-        <div className="accordion">
+        <div className="accordion" data-aos="fade-in" data-aos-delay="300">
           {faq.map((q) => (
             <Faq key={q.id} {...q} />
           ))}
         </div>
-        <div className="faqs-btn-container">
+        <div
+          className="faqs-btn-container"
+          data-aos="fade-in"
+          data-aos-delay="300"
+        >
           <Button primary href="#!">
             More Info
           </Button>

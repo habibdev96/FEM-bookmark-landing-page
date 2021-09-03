@@ -61,13 +61,13 @@ const Features = () => {
   return (
     <Section>
       <Container>
-        <SectionHeading>Features</SectionHeading>
-        <Paragraph section>
+        <SectionHeading data-aos="fade-up">Features</SectionHeading>
+        <Paragraph section data-aos="fade-up" data-aos-delay="100">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </Paragraph>
-        <div className="features">
+        <div className="features" data-aos="fade-in" data-aos-delay="200">
           <div className="tab-container">
             {features.map((feature, index) => (
               <button
@@ -82,7 +82,7 @@ const Features = () => {
           <Feature image={image} heading={heading} description={description} />
         </div>
       </Container>
-      <BgPattern feature />
+      <BgPattern feature data-aos="fade-in" data-aos-delay="300" />
     </Section>
   );
 };

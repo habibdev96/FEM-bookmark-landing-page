@@ -32,13 +32,19 @@ const Hero = () => {
     <Header>
       <Container>
         <div className="hero-info">
-          <HeroHeading>A Simple Bookmark Manager</HeroHeading>
-          <Paragraph>
+          <HeroHeading data-aos="fade-up">
+            A Simple Bookmark Manager
+          </HeroHeading>
+          <Paragraph data-aos="fade-up" data-aos-delay="100">
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </Paragraph>
-          <div className="hero-btn-container">
+          <div
+            className="hero-btn-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <Button primary href="#!">
               Get it on Chrome
             </Button>
@@ -51,9 +57,10 @@ const Hero = () => {
           className="hero-img"
           src={heroImg}
           alt="illustration of the bookmark app"
+          data-aos="zoom-in"
         />
       </Container>
-      <BgPattern hero />
+      <BgPattern hero data-aos="fade-in" data-aos-delay="300" />
     </Header>
   );
 };
