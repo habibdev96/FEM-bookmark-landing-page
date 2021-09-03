@@ -2,6 +2,8 @@
 
 landing page challenge for frontend mentor
 
+site: https://fem-bookmark-landing-page-challenge.netlify.app/
+
 #### Features
 - tab section
 - accordion
