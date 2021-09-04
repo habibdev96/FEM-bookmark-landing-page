@@ -16,7 +16,7 @@ site: https://fem-bookmark-landing-page-challenge.netlify.app/
 - react
 - styled components
 
-#### Dependencies
+#### Libraries
 - react-icons
 - aos.js
 - react-hook-form
